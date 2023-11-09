@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::apiResources([
-    'example' => App\Http\Modules\Examples\Controllers\ExampleController::class,
+    'post' => App\Http\Modules\Posts\Controllers\PostController::class,
 ]);
 
 Route::group(['middleware' => ['json.response']], function () {
