@@ -14,6 +14,8 @@ class CreatePostRequest extends BaseRequest
     public function rules(): array
     {
         return [
+            'title' => 'required',
+            'description' => 'required',
         ];
     }
 

@@ -17,7 +17,7 @@ class Post extends BaseModel
      *
      * @var array<int, string>
      */
-    protected $fillable = ['id', 'title', 'description'];
+    protected $fillable = ['id', 'title', 'description', 'user_id'];
 
     public static function getAllowedFilters(): array
     {
@@ -25,6 +25,7 @@ class Post extends BaseModel
             AllowedFilter::exact('id'),
             AllowedFilter::exact('title'),
             AllowedFilter::exact('description'),
+            AllowedFilter::exact('user_id'),
         ];
     }
 

@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::apiResources([
-    'post' => App\Http\Modules\Posts\Controllers\PostController::class,
-]);
+require __DIR__ . '/post/post.php';
 
 Route::group(['middleware' => ['json.response']], function () {
 
